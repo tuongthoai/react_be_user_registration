@@ -6,6 +6,7 @@ async function bootstrap() {
   const corsOptions = {
     origin: 'https://react-fe-user-registration.onrender.com',
     optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+    credentials: true,
   };
   const app = await NestFactory.create(AppModule);
   app.enableCors(corsOptions);
